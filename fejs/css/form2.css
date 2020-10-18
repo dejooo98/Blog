@@ -1,0 +1,202 @@
+/* blog */
+* {
+  box-sizing: border-box;
+}
+
+/*------------------------------
+            Preloader 
+------------------------------*/
+.load{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.load hr{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
+}
+.load hr:first-child{
+  background-color: #222;
+  animation-delay: -1.5s;
+}
+.load hr:nth-child(2){
+  background-color: #f79041;
+  animation-delay: -1s;
+}
+.load hr:nth-child(3){
+  background-color: #222;
+  animation-delay: -.5s;
+}
+.load hr:last-child{
+  background-color: #f79041;
+}
+
+@keyframes spin{
+  0%, 100%{
+      transform: translate(0)
+  }
+  25%{
+      transform: translate(160%)
+  }
+  50%{
+      transform: translate(160%,160%)
+  }
+  
+  75%{
+      transform: translate(0, 160%)
+  }
+}
+.container {
+  font-family: Arial;
+  padding: 20px;
+  color: #222;
+  font-family:helvetica;
+  background: linear-gradient(rgba(4, 0, 50, 0.54),rgba(4, 0, 50, 0.5)), url(../image/background.jpg);   
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+  h2{
+    font-family: 'Lobster', cursive;
+    color: #fff;
+    font-weight: 100;
+    margin: 20px 0;
+    padding-left: 30px;
+    text-align: center;
+}
+
+h5{
+  color: #fff;
+}
+h3{
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+
+.column {   
+  float: left;
+  width: 100%;
+}
+#imageuser{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 20px;
+    float: left;
+}
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.fakeimg {
+  background-color: rgba(170, 170, 170, 0.431);
+    width: 100%;
+    padding: 30px;
+    float: left;
+    margin-top: 100px;
+}
+.fakeimgg {
+  background-color: rgba(255, 255, 255, 0.29);  width: 100%;
+  padding: 10px;
+  float: left;
+  margin-top: 50px;
+}
+
+
+.card {
+   background-color: #0000007a;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+.cardd {
+  background-color: #0000007a;
+  padding: 6px;
+  width: 80%;
+  margin: 20px auto;
+  height: 320px;
+  border-radius: 40px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mesage{
+  resize: none;
+  height: 175px;
+  background-color: #040717;
+  margin-top: 10px;
+}
+
+input[type="text"]
+  {
+    height: 175px;
+
+  }
+button{
+    float: right;
+    width: 200px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+button:hover {
+  background-color: #0a3d62;
+  border-radius: 10px;
+  color: #fff;
+}
+.button{
+    float: right;
+    width: 200px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.button:hover {
+  background-color: #0a3d62;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.vreme_poruke{
+  padding: 5px;
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 10px
+}
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}

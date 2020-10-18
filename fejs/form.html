@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/form.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <title>| MaDdoxX |Registracija korisnika|</title>
+</head>
+<div class="header">
+  <a href="#" class="logo">MaDdoxX</a>
+  <p class="header-text">CONNECTING PEOPLE</p>
+  <div class="header-right">
+    
+  </div>
+</div>
+    <div class="body-content">
+  <div class="module" >
+    <h1>Korisnicki nalog</h1>
+    <form id="module" class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
+      <div class="alert alert-error"><?= $_SESSION['message'] ?></div>
+      <input type="text" placeholder="Ime" name="username" required />
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Lozinka" name="password" autocomplete="new-password" required />
+      <input type="password" placeholder="Potvrdi lozinku" name="confirmpassword" autocomplete="new-password" required />
+      <div class="avatar"><label>Izaberite vasu sliku: </label><input type="file" name="avatar" accept="image/*" required /></div>
+      <label for="tip" required>Izaberite tip prijavljivanja:</label>
+      <select id="tip" name="tip"required>
+        <option value="korisnik">Korisnik</option>
+        <option value="admin">Admin</option>
+      </select>
+      <input type="submit" value="Registracija" name="register" class="btn btn-block btn-primary" />
+    </form>
+  </div>
+  <div class="module2" id="module2">
+    <img src="./image/friends.png">
+    <p class="module2-text">
+    MaDdoxX helps you connect and share with the people in your life.
+    </p>
+  </div>
+</div> 
+<div class="footer">
+<p> Copyrights @2020</p>
+</div>
+</body>
+</html>
